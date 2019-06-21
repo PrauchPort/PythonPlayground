@@ -9,9 +9,7 @@ def duplicates(array):
             duplicates.append(array[i])
     return duplicates
 
+test = unittest.TestCase()
 
-
-print(duplicates([1, 2, 4, 4, 3, 3, 1, 5, 3, '5']))
-
-
+test.assertEquals(duplicates([1, 2, 4, 4, 3, 3, 1, 5, 3, '5']), [4, 3, 1], "Wrong")
 
