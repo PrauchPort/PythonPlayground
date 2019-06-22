@@ -8,10 +8,7 @@ def find_nb(m):
     while sum < m:
         n += 1
         sum += n*n*n
-    if sum == m:
-        return n
-    else:
-        return -1
+    return n if sum == m else -1
 
 test = unittest.TestCase()
 
