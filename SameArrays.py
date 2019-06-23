@@ -3,11 +3,10 @@
 import unittest
 
 def comp(array1, array2):
-    if array1 == None or array2 == None:
-        return False
-    squared = [x*x for x in array1]
-    a, b = sorted(squared), sorted(array2)
-    return a == b
+    try:
+        return [i*i for i in sorted(array1)] == sorted(array2)
+    except:
+        return None
 
 test = unittest.TestCase()
 
