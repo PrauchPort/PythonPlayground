@@ -15,7 +15,7 @@ def scramble2(s1, s2):
             return False
     return True
 
-def scramble(s1, s2):
+def scramble1(s1, s2):
     s1, s2 = list(s1), list(s2)
     for item in s2:
         if item not in s1:
@@ -23,6 +23,11 @@ def scramble(s1, s2):
         s1.remove(item)
     return True
 
+def scramble(s1, s2):
+    for item in set(s2):
+        if s2.count(item) > s1.count(item):
+            return False
+    return True
 
 
 test = unittest.TestCase()
