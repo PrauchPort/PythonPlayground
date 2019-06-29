@@ -1,4 +1,4 @@
-## https://www.codewars.com/kata/sum-of-digits-slash-digital-root/train/python
+# https://www.codewars.com/kata/sum-of-digits-slash-digital-root/train/python
 
 import unittest
 
