@@ -15,7 +15,6 @@ def valid_parentheses(string):
     return count == 0
 
 
-
 test = unittest.TestCase()
 
 
