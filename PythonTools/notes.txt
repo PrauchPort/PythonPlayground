@@ -1,0 +1,5 @@
+to run Luigi Task
+
+python -m luigi --module Luigi CountLetters --local-schedule
+                          ^ name of python file
+                                ^ name of Luigi Task
