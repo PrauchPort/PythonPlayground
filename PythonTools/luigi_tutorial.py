@@ -19,11 +19,26 @@ class CountLetters(luigi.Task):
         return GenerateWords()
 
     def output(self):
-        return Luigi.LocalTarget('local_files/letter_count.txt')
+        return luigi.LocalTarget('local_files/letter_count.txt')
 
     def run(self):
         with self.input().open('r') as infile:
             words = infile.read().splitlines()
         with self.output().open('w') as outfile:
             for word in words:
-                outfile.write('{word} : {count} \n').format(word = word, count=len(word))
+                outfile.write('{word} : {count} \n').format(word = word, count="6")
+
+class HelloWorld(luigi.Task):
+
+    def requires(self):
+        return None
+
+    def output(self):
+        return luigi.LocalTarget('luigi_files/hello_world.txt')
+
+    def run(self):
+        with self.output().open('w') as output_file:
+            output_file.write('Hello, World ang Luigi! \n')
+
+if __name__ == '__main__':
+    luigi.run()
