@@ -101,5 +101,34 @@ class MyWorkflow(luigi.Task):
         return self.input()
 
 
+class Task1(luigi.Task):
+    def requires(self):
+        return None
+    def output(self):
+        return {
+                'output_1' : luigi.LocalTarget('luigi_files/task1_1'),
+                'output_2' : luigi.LocalTarget('luigi_files/task1_2')
+        }
+    def run(self):
+        with self.output()['output_1'].open('w') as outfile:
+            outfile.write('foo \n bar \n hello \n')
+        with self.output()['output_2'].open('w') as outfile:
+            outfile.write('a \n b \n c \n')
+
+class Task2(luigi.Task):
+    def requires(self):
+        return Task1()
+    def output(self):
+        return luigi.LocalTarget('luigi_files/task_2')
+    def run(self):
+        with self.input()['output_1'].open('r') as infile1:
+            with self.input()['output_2'].open('r') as infile2:
+                with self.output().open('w') as outfile:
+                    for line in infile1:
+                        outfile.write(line)
+                    for line in infile2:
+                        outfile.write(line)
+
+
 if __name__ == '__main__':
     luigi.run()
