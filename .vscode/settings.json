@@ -1,0 +1,8 @@
+{
+    "python.formatting.provider": "autopep8",
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.mypyEnabled": true,
+    "python.pythonPath": "/Users/wojciechprazuch/anaconda3/envs/deeplearning/bin/python",
+    "editor.formatOnSave": true
+}
