@@ -1,3 +1,5 @@
+# https://refactoring.guru/design-patterns/abstract-factory/python/example#lang-features
+
 import typing
 from abc import abstractmethod, ABC
 
