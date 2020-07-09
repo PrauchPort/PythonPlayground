@@ -3,6 +3,6 @@
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": true,
     "python.linting.mypyEnabled": true,
-    "python.pythonPath": "/Users/wojciechprazuch/anaconda3/envs/deeplearning/bin/python",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "python.pythonPath": "C:\\ProgramData\\Anaconda3\\envs\\deeplearning\\python.exe"
 }
