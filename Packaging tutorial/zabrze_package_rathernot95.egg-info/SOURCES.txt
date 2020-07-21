@@ -1,0 +1,6 @@
+README.md
+setup.py
+zabrze_package_rathernot95.egg-info/PKG-INFO
+zabrze_package_rathernot95.egg-info/SOURCES.txt
+zabrze_package_rathernot95.egg-info/dependency_links.txt
+zabrze_package_rathernot95.egg-info/top_level.txt
