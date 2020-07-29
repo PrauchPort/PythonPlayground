@@ -11,3 +11,14 @@ def timethis(func):
         print(func.__name__, end - start)
         return result
     return wrapper
+
+
+@timethis
+def countdown(n):
+    while n > 0:
+        n -= 1
+
+
+countdown(10)
+
+countdown(100000000)
