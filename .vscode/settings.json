@@ -3,6 +3,7 @@
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": true,
     "python.linting.mypyEnabled": true,
+    "editor.fontSize": 17,
     "editor.formatOnSave": true,
     "python.pythonPath": "C:\\ProgramData\\Anaconda3\\envs\\deeplearning\\python.exe"
 }
